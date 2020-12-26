@@ -1,0 +1,24 @@
+{% extends "royaltyv/home/base.html" %}
+
+{% block search-form %}
+    <form class="searchbar-form" action="{% url 'search_tvs' %}" method="GET">
+        <input type="text" id="searchbar" name="search" placeholder="Search">
+    </form>
+{% endblock search-form %}
+
+{% block content %}
+    <div class="canvas-grid">
+        {% for tv in data %}
+                <div class="block">
+                    <a href="{% url 'selected_tv' tv_id=tv.id %}">
+                        <input type="image" src="{{img_base_url}}{{tv.poster_path}}">
+                    </a>
+                    <p>{{ tv.name }}</p>
+                </div>
+        {% endfor %}         
+    </div>
+{%  endblock content %}
+                
+
+
+

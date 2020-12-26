@@ -1,0 +1,46 @@
+{% extends "royaltyv/home/base.html" %}
+
+{% block search-form %}
+    <form class="searchbar-form" action="{% url 'search_tvs' %}" method="GET">
+        <input type="text" id="searchbar" name="search" placeholder="Search">
+    </form>
+{% endblock search-form %}
+
+{% block content %}
+<!-- For background
+style="background-image: url({{img_base_url}}{{data.backdrop_path}}); filter: brightness(40%); min-width: 100%;"
+-->
+<div class="selected-scene">
+    <img id="background" src="{{ img_base_url }}{{ data.backdrop_path }}">
+    <p class="title">{{data.name}}</p>
+    <div class="break-line"></div>
+    <img src="{{img_base_url}}{{data.poster_path}}">
+    <div class="break-line"></div>
+    <div class="overview">
+        {{data.overview}}
+    </div>
+    <div class="break-line"></div>
+    <div class="details">
+        Status: {{ data.status }}
+        <br>
+        Runtime: {{ data.episode_run_time }} minutes
+        <br>
+        Rating: {{ data.vote_average }}
+        <br>
+        Release date: {{data.first_air_date}}
+        <br>
+        Seasons: {{ data.number_of_seasons }}
+        <br>
+        Episodes: {{ data.number_of_episodes }}
+        <br>
+        Genre: {% for genre in data.genres %}
+            {{ genre.name }}
+        {% endfor %}
+        <br>
+        Language: {{ data.original_language }}
+        <br>
+        <br>
+    </div>
+    <div class="break-line"></div>
+</div>
+{%  endblock content %}

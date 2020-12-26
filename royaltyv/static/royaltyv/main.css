@@ -1,0 +1,151 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    background-color: rgb(83, 83, 83);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    border-right: 4px solid rgb(119, 7, 134);
+    border-left: 4px solid rgb(119, 7, 134);
+}
+
+/*
+Linear background
+background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+    );
+*/
+
+.upper-part {
+    background-color: rgb(60, 60, 60);   /*rgb(43, 43, 43);*/
+    border-bottom: 4px solid rgb(119, 7, 134);
+    padding: 0;
+    margin-left: -4px;
+    margin-bottom: 20px;
+    top: 0;
+    left: 0;
+    width: 108%;
+    height: 80px;
+    text-align: center;
+}
+
+.searchbar-form > input[type=text]{
+    background-color: rgb(82, 82, 82);
+    width: 80%;
+    height: 60%;
+    padding: 9px 20px;
+    margin: 16px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid rgb(119, 7, 134);
+    border-radius: 10px 10px;
+    color: rgb(201, 63, 219);
+    font-size: 160%;
+    font-family: 'Verdana', 'sans-serif', 500;
+    transition: 0.15s;
+}
+
+.searchbar-form > input[type=text]:focus{
+    outline: none;
+    background-color: rgb(105, 99, 99);
+}
+
+.canvas-grid {
+    margin-left: 0px;
+    display: grid;
+    overflow-x: auto;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, 250px);    /* left right*/
+    grid-template-rows: repeat(150px); /* up down*/
+    grid-row-gap: 35px;
+}
+
+.block{
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 15px;
+    height: auto;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* First 5 child */
+.block:nth-child(-n + 5){
+    margin-top: 6px;
+}
+
+.block:hover{
+    background-color: rgb(124, 12, 124);    /* This was supposed to be lighter gray */
+    outline: 6px solid rgb(119, 7, 134);
+}
+
+.selected-scene{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#background{
+    pointer-events: none;
+    position: absolute;
+    min-width: 98%;
+    min-height: 98%;
+    max-height: 105%;
+    filter: brightness(40%);
+    filter: blur(10px);
+    z-index: 1;
+}
+
+.selected-scene > .title{
+    font-size: 30px;
+    font-family: 'Verdana', 'sans-serif', 500;
+    text-align: center;
+    z-index: 2;
+}
+
+.selected-scene > .break-line{
+    flex-basis: 100%;
+}
+
+.selected-scene > img{
+    width: 200px;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+.selected-scene > .overview{
+    padding: 5px;
+    background-color: rgba(53, 53, 53, 0.8);
+    width: 50%;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Verdana', 'sans-serif';
+    z-index: 2;
+}
+
+.selected-scene > .details{
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 250px;
+    background-color: rgba(53, 53, 53, 0.5);
+    font-family: 'Verdana', 'sans-serif';
+    z-index: 2;
+}
+

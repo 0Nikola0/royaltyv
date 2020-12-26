@@ -1,0 +1,29 @@
+{% extends "royaltyv/home/base.html" %}
+
+{% block search-form %}
+    <form class="searchbar-form" action="{% url 'search_movies' %}" method="GET">
+        <input type="text" id="searchbar" name="search" placeholder="Search">
+    </form>
+{% endblock search-form %}
+
+{% block content %}
+<div class="canvas-grid">
+    {% for movie in data %}
+            <a href="{% url 'selected_movie' movie_id=movie.id %}" class="block">
+                <img src="{{img_base_url}}{{movie.poster_path}}">
+                <p>{{ movie.title }}</p>
+            </form>
+    {% endfor %}   
+
+    <!--    Example block
+    <div class="block">
+        <input type="image" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
+        <p>Movie name here</p>
+    </div>
+    -->
+</div>
+{%  endblock content %}
+                
+
+
+
