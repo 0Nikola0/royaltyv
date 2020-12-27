@@ -1,5 +1,5 @@
-![](banner1)
+<img src="banners/banner1">
 <br>
-![](banner2)
+<img src="banners/banner2">
 <br>
-![](banner3)
+<img src="banners/banner3">
