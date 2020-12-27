@@ -1,5 +1,5 @@
-<img src="banners/banner1">
+<img src="banners/banner1.png">
 <br>
-<img src="banners/banner2">
+<img src="banners/banner2.png">
 <br>
-<img src="banners/banner3">
+<img src="banners/banner3.png">
