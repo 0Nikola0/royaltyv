@@ -1,5 +1,5 @@
-![](banners/banner1)
+![](banner1)
 <br>
-![](banners/banner2)
+![](banner2)
 <br>
-![](banners/banner3)
+![](banner3)
