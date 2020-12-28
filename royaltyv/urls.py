@@ -11,5 +11,8 @@ urlpatterns = [
     # Clicked on
     path('movies?<movie_id>', views.selected_movie, name="selected_movie"),
     path('tv-shows?<tv_id>', views.selected_tv, name="selected_tv"),
+    # Registration
+    path('register/', views.registration, name="registration"),
+    path('login/', views.registration, name="login"),
 ]
  

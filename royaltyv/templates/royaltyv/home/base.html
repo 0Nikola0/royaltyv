@@ -16,6 +16,14 @@
     </head>
 
     <body>
+        {% if messages %}
+                {% for message in messages %}
+                <div style="background-color: rgb(47, 255, 64); border: 4px solid rgb(11, 119, 20)">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        
         <div id="mySidenav" class="sidenav">
             <a href="{% url 'trending_movies' %}">
                 <img src="{% static 'royaltyv/icons/movies_icon.png' %}" title="Movies">

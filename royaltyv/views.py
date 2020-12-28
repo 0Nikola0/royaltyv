@@ -5,6 +5,14 @@ from .scrapers.tmdb import IMG_BASE_URL
 from .scrapers.tmdb import getTrending, getSearched, getSelected
 
 
+def registration(request):
+    context = {
+        "data": "data",
+        "img_base_url": IMG_BASE_URL
+    }
+    return render(request, "royaltyv/home/registration.html", context)
+
+
 def trending_movies(request):
     data = getTrending("movie")
     context = {
