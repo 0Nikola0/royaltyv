@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import django_heroku
 
 # Load env variables
 load_dotenv()
@@ -31,10 +32,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = False
 
 # This doesn't matter if DEBUG=True
-ALLOWED_HOSTS = [
-    '.herokuapp.com',
-    'royaltyv.herokuapp.com'
-    ]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -134,5 +132,4 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-import django_heroku
 django_heroku.settings(locals())
