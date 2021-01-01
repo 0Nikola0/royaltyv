@@ -2,3 +2,4 @@ python-dotenv
 requests
 Django
 django-crispy-forms
+django-heroku
