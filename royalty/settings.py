@@ -32,7 +32,7 @@ DEBUG = False
 
 # This doesn't matter if DEBUG=True
 ALLOWED_HOSTS = [
-    'herokuapp.com'
+    '.herokuapp.com'
 ]
 
 
