@@ -3,3 +3,4 @@ requests
 Django
 django-crispy-forms
 django-heroku
+gunicorn
