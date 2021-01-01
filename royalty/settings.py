@@ -128,3 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+import django_heroku
+django_heroku.settings(locals())
