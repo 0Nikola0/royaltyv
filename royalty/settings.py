@@ -31,7 +31,10 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = False
 
 # This doesn't matter if DEBUG=True
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = [
+    '.herokuapp.com',
+    'royaltyv.herokuapp.com'
+    ]
 
 
 # Application definition
