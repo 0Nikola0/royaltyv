@@ -34,7 +34,9 @@ DEBUG = False
 # This doesn't matter if DEBUG=True
 ALLOWED_HOSTS = [
     'localhost',
+    '*.herokuapp.com',
     'royaltyv.herokuapp.com',
+    'dashboard.heroku.com',
     ]
 
 
