@@ -143,8 +143,10 @@ STATICFILES_DIRS = (
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Changed from 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# FIX YOUR DOCUMENTATION I SPENT HOURS FIXING UNNECCESSARY STUFF
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Must be commented when run locally, else it won't run
 # But it's needed to run on heroku
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
