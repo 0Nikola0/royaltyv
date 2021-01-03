@@ -7,7 +7,7 @@
     z-index: 1; /* Stay on top */
     top: 76px;
     left: 0px;
-    background-color: rgb(60, 60, 60); /* Black*/
+    background-color: rgb(53, 53, 53);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 0px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
