@@ -10,8 +10,9 @@
 <!-- For background with style set from here (html)
 style="background-image: url({{img_base_url}}{{data.backdrop_path}}); filter: brightness(40%); min-width: 100%;"
 -->
+<div id="background" style="background-image: url({{img_base_url}}{{data.backdrop_path}}); background-repeat: no-repeat; background-size: cover;"></div>
 <div class="selected-scene">
-    <img id="background" src="{{ img_base_url }}{{ data.backdrop_path }}">
+    <!--<img id="background" src="{{ img_base_url }}{{ data.backdrop_path }}">-->
     <p class="title">{{data.title}}</p>
     <div class="break-line"></div>
     <img src="{{img_base_url}}{{data.poster_path}}">

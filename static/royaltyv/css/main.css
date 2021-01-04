@@ -5,6 +5,26 @@
     color: white;
 }
 
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(70, 70, 70);
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(53, 53, 53);
+    border-radius: 0px;
+}
+/* /SCROLLBAR */
+
+
 body{
     background-color: rgb(70, 70, 70);
     padding: 0;
@@ -30,7 +50,6 @@ background: repeating-linear-gradient(
     border-bottom: 4px solid rgb(119, 7, 134);
     padding: 0;
     margin-left: -4px;
-    margin-bottom: 20px;
     top: 0;
     left: 0;
     width: 108%;
@@ -85,10 +104,10 @@ background: repeating-linear-gradient(
 
 /* First 5 child */
 .block:nth-child(-n + 5){
-    margin-top: 6px;
+    margin-top: 16px;
 }
 
-.block:hover{
+.block:hover, .block:focus{
     background-color: rgb(82, 11, 82);    /* This was supposed to be lighter gray */
     outline: 6px solid rgb(132, 7, 148);
 }
@@ -103,14 +122,15 @@ background: repeating-linear-gradient(
 }
 
 #background{
+    display: block;
     pointer-events: none;
     position: absolute;
-    min-width: 98%;
-    min-height: 98%;
-    max-height: 105%;
-    filter: brightness(40%);
-    filter: blur(10px);
-    z-index: 1;
+    top: 84px;
+    min-width: 99.5%;
+    min-height: 100%;
+    max-height: 200%;
+    filter: brightness(40%) blur(6px);
+    z-index: 0;
 }
 
 .selected-scene > .title{
@@ -132,7 +152,8 @@ background: repeating-linear-gradient(
 
 .selected-scene > .overview{
     padding: 5px;
-    background-color: rgba(53, 53, 53, 0.8);
+    background-color: rgba(53, 53, 53, 0.3);
+    border-radius: 10px;
     width: 50%;
     max-height: 200px;
     overflow-y: auto;
@@ -145,7 +166,8 @@ background: repeating-linear-gradient(
     padding-top: 5px;
     padding-left: 10px;
     width: 250px;
-    background-color: rgba(53, 53, 53, 0.5);
+    background-color: rgba(53, 53, 53, 0.3);
+    border-radius: 10px;
     font-family: 'Verdana', 'sans-serif';
     z-index: 2;
 }

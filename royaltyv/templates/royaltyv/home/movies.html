@@ -12,7 +12,7 @@
             <a href="{% url 'selected_movie' movie_id=movie.id %}" class="block">
                 <img src="{{img_base_url}}{{movie.poster_path}}">
                 <p>{{ movie.title }}</p>
-            </form>
+            </a>
     {% endfor %}   
 
     <!--    Example block
